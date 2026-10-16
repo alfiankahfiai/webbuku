@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mahawangsa — Digital Book</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <aside id="sidebar">
+      <a class="brand" href="#">
+        <img class="brandmark" src="assets/LOGO.png" alt="Logo Mahawangsa" />
+        <div class="mahawangsa">MAHAWANGSA<small>DIGITAL LIBRARY</small></div>
+      </a>
+      <div class="edition">EDISI DIGITAL · 2026</div>
+      <h1>Sistem<br />Manajemen<span>.</span></h1>
+      <p class="muted">Security Service Solution</p>
+      <div class="nav">
+        <button id="readTab" class="active">▣ &nbsp; Jelajahi halaman</button>
+        <button id="marksTab">
+          ☆ &nbsp; Penanda saya <span id="markCount">0</span>
+        </button>
+      </div>
+      <label class="search"
+        >⌕
+        <input
+          id="search"
+          placeholder="Cari teks atau nomor halaman…"
+          aria-label="Cari halaman"
+      /></label>
+      <div class="sectionlabel" id="listLabel">
+        SELURUH HALAMAN <span>107</span>
+      </div>
+      <div id="thumbs"></div>
+      <div class="sidebarfoot">
+        <span class="dot"></span> Dokumen siap dibaca
+        <small>Profesional · Commitment · Responsive</small>
+      </div>
+    </aside>
+    <main>
+      <header>
+        <button id="menu" title="Buka daftar halaman">☰</button>
+        <div class="header-title">
+          <img class="header-logo" src="assets/LOGO.png" alt="Logo Mahawangsa" />
+          <div>
+          <span class="eyebrow">RUANG BACA</span>
+          <h2>Sistem Manajemen <span class="mahawangsa">PT. Mahawangsa</span></h2>
+          </div>
+        </div>
+        <a class="download" href="buku.pdf" download>↓ <span>Unduh PDF</span></a
+        ><button id="full" title="Layar penuh">⛶</button>
+      </header>
+      <div class="bookheading">
+        <div>
+          <span class="live">●</span> FLIPBOOK INTERAKTIF
+          <span class="pill">2 sisi</span>
+        </div>
+        <button id="bookmark">☆ Tandai halaman</button>
+      </div>
+      <section id="viewport" aria-label="Buku digital">
+        <div class="ambient"></div>
+        <div id="scale">
+          <div id="book">
+            <div id="left" class="page left"></div>
+            <div id="right" class="page right"></div>
+          </div>
+        </div>
+        <button class="side prev" title="Halaman sebelumnya">‹</button
+        ><button class="side next" title="Halaman selanjutnya">›</button>
+      </section>
+      <div class="caption">
+        <span id="pageLabel" aria-live="polite">Sampul depan</span
+        ><span>Klik tepi buku atau gunakan tombol ← →</span>
+      </div>
+      <footer>
+        <div class="pager">
+          <button id="first" title="Sampul depan">|‹</button
+          ><button class="prev" title="Sebelumnya">‹</button
+          ><label
+            ><input
+              id="jump"
+              type="number"
+              min="1"
+              max="107"
+              value="1"
+              aria-label="Lompat ke halaman"
+            /><span>/ 107</span></label
+          ><button class="next" title="Berikutnya">›</button
+          ><button id="last" title="Sampul belakang">›|</button>
+        </div>
+        <div class="zoom">
+          <button id="out" title="Perkecil">−</button
+          ><button id="reset" title="Reset zoom">100%</button
+          ><button id="in" title="Perbesar">+</button>
+        </div>
+        <button id="auto">▷ <span>Putar otomatis</span></button>
+      </footer>
+      <div class="progress"><div id="progress"></div></div>
+      <div class="bottom">
+        <span class="mahawangsa">MAHAWANGSA <b> / </b> <span class="footer-tagline">KNOWLEDGE & EXCELLENCE</span></span
+        ><span id="progressText">1 dari 107 halaman</span>
+      </div>
+    </main>
+    <div id="toast" role="status"></div>
+    <script src="pages.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
